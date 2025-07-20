@@ -139,3 +139,33 @@ Once completed, you will have successfully restored your **PostgreSQL database**
 ---
 
 Feel free to **fork** or **clone** this repository for your own use, and **submit a pull request** if you'd like to contribute additional features!
+
+---
+
+### **Commands Used During This Project**
+
+#### **1. Backup Database Using `pg_dump`**:
+
+```bash
+pg_dump -U postgres -h localhost -d my_database -F c -f /home/user/my_database.backup
+```
+
+#### **2. Transfer Backup File to EC2**:
+
+```bash
+scp -i /path/to/your-key.pem /path/to/local/my_database.backup ubuntu@<EC2_public_IP>:/home/ubuntu/
+```
+
+#### **3. Restore Backup to RDS Using `pg_restore`**:
+
+```bash
+pg_restore -h my-postgresql-db.csvo4kmciapf.us-east-1.rds.amazonaws.com -U postgres -d postgres --no-owner -v /home/ubuntu/my_database.backup
+```
+
+#### **4. Restore Data Only, Excluding a Table**:
+
+```bash
+pg_restore -h my-postgresql-db.csvo4kmciapf.us-east-1.rds.amazonaws.com -U postgres -d postgres --data-only -v --exclude-table=public.lineitem /home/ubuntu/my_database.backup
+```
+
+---
