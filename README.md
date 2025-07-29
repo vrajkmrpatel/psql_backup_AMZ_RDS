@@ -11,6 +11,7 @@ This project focuses on enabling **native backup** and **restore** for **Postgre
 
 ---
 
+## Architecture
 <img src="https://github.com/vrajkmrpatel/psql_backup_AMZ_RDS/blob/main/postgresRDSBackup.png"></img>
 
 ---
