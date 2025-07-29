@@ -11,6 +11,10 @@ This project focuses on enabling **native backup** and **restore** for **Postgre
 
 ---
 
+<img src="https://github.com/vrajkmrpatel/psql_backup_AMZ_RDS/blob/main/postgresRDSBackup.png"></img>
+
+---
+
 ## Objectives
 
 ### 1. Enable Native Backup and Restore on RDS
